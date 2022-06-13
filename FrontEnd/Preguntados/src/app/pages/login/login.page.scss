@@ -1,0 +1,31 @@
+ion-content {
+    --background:#77bc3f;
+    --color: #3880ff;
+    --keyboard-offset: 0px;
+    --offset-bottom: 0px;
+    --offset-top: 0px;
+    --padding-bottom: 0px;
+    --padding-end: 0px;
+    --padding-start: 0px;
+    --padding-top: 0px;
+}
+
+ion-item{
+    margin: 10px 0;
+}
+
+
+ion-card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 300px;
+}
+
+.btn {
+    font-size: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+

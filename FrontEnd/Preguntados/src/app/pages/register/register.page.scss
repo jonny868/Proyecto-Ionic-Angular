@@ -1,0 +1,32 @@
+
+ion-content {
+    --background: #77bc3f;
+    --color: #3880ff;
+}
+
+
+
+ion-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+}
+
+.btn {
+    font-size: 20px;
+    width: 300px;
+    text-align: center;
+    margin: auto;
+}
+
+ion-toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ion-title {
+    margin: 20px;
+}
