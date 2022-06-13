@@ -10,6 +10,14 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
   },
+  {
+    path: 'main',
+    loadChildren: () => import('./pages/main/main.module').then( m => m.MainPageModule)
+  },
+  {
+    path: 'play-mode',
+    loadChildren: () => import('./pages/play-mode/play-mode.module').then( m => m.PlayModePageModule)
+  },
 ];
 
 @NgModule({
