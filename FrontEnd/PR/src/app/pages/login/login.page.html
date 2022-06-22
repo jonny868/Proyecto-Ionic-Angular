@@ -1,0 +1,21 @@
+<ion-content class="ion-padding ion-text-center ion">
+  <img src="assets/logo.jpeg" alt="logo">
+  <div class="main">
+    <ion-card>
+      <ion-item lines="inset">
+        <ion-input [(ngModel)]="user.email" placeholder="Email"></ion-input>
+      </ion-item>
+      <ion-item lines="inset">
+        <ion-input [(ngModel)]="user.password" type="password" placeholder="Password"></ion-input>
+      </ion-item>
+      <ion-button (click)="login()" class="btn ion-text-capitalize" color="success">
+        Login
+      </ion-button>
+      <ion-button routerLink="/register" class="ion-text-capitalize" fill="clear">
+        Sign Up here
+      </ion-button>
+    </ion-card>
+
+  </div>
+
+</ion-content>
