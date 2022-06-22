@@ -11,7 +11,7 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:0.10.0",
           "options": {
             "outputPath": "www",
             "index": "src/index.html",
@@ -78,7 +78,7 @@
             "production": {
               "browserTarget": "app:build:production"
             },
-            "ci": {
+            "cli": {
               "progress": false
             }
           }

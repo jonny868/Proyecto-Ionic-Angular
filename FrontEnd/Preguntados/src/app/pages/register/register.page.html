@@ -3,24 +3,26 @@
     <img class="im" src="assets/logo.jpeg" alt="logo" />
     <ion-card>
       <ion-toolbar>
-        <ion-title class="ion-text-center">Register</ion-title>
-        <ion-item lines="inset">
+        <!-- <ion-item lines="inset">
           <ion-label position="floating">Nickname</ion-label>
           <ion-input type="text" placeholder=" ExampleNickname123"></ion-input>
-        </ion-item>
+        </ion-item> -->
         <ion-item lines="inset">
           <ion-label position="floating">Email</ion-label>
-          <ion-input type="text" placeholder="JohnDoe@gmail.com"></ion-input>
+          <ion-input [(ngModel)]="user.email" type="text" placeholder="JohnDoe@gmail.com"></ion-input>
         </ion-item>
         <ion-item lines="inset">
           <ion-label position="floating">Password</ion-label>
-          <ion-input type="password" placeholder="123456"></ion-input>
+          <ion-input [(ngModel)]="user.password" type="password" placeholder="123456"></ion-input>
         </ion-item>
-        <ion-button expand="block" color="success">
-          Click me
+        <br><br><br>
+        <ion-button (click)="register()" expand="block" color="success">
+          Register
         </ion-button>
       </ion-toolbar>
+      <ion-button routerLink="/" class="ion-text-capitalize" fill="clear">
+        Back
+      </ion-button>
     </ion-card>
   </div>
 </ion-content>
- 
