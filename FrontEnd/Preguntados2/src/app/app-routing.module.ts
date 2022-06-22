@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
@@ -8,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -21,11 +22,17 @@ const routes: Routes = [
   },
   {
     path: 'play-mode',
-    loadChildren: () => import('./pages/play-mode/play-mode.module').then( m => m.PlayModePageModule)
+    loadChildren: () => import('./pages/play-mode/play-mode.module').then( m => m.PlayModePageModule),
+    canActivate:[AuthGuard]
   },
   {
     path: 'main',
-    loadChildren: () => import('./pages/main/main.module').then( m => m.MainPageModule)
+    loadChildren: () => import('./pages/main/main.module').then( m => m.MainPageModule),
+    canActivate:[AuthGuard]
+  },
+  {
+    path: 'questions',
+    loadChildren: () => import('./pages/questions/questions.module').then( m => m.QuestionsPageModule)
   },
 ];
 
