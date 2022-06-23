@@ -7,17 +7,19 @@ import { QuestionsService } from 'src/app/services/questions.service';
   styleUrls: ['./questions.page.scss'],
 })
 export class QuestionsPage implements OnInit {
-  question: any = {
-    question:'',
-    correctAnswer:'',
-    incorrectAnswers:[]
-  };
-  constructor(private questionsService: QuestionsService) { }
+  constructor(public questionsService: QuestionsService) { }
 
   ngOnInit() {
     this.play();
   }
-  play(){
-    this.questionsService.getQuestions();
+  async play(){
+    await this.questionsService.getQuestions().subscribe(
+      (res)=>{
+        this.questionsService.question = res;
+        console.log(this.questionsService.question);
+      },
+      (err)=> {console.error(err);
+      }
+    );
   }
 }

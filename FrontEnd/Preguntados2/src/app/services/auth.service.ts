@@ -40,4 +40,9 @@ export class AuthService {
   loggedIn(): boolean{
     return !!localStorage.getItem('token');
   }
+
+  logOut(){
+    return localStorage.removeItem('token');
+    this.router.navigate(['/login']);
+  }
 }
