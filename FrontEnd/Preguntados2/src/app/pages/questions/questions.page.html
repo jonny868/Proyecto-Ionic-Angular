@@ -1,30 +1,13 @@
 
 <ion-content>
-<ion-card>
-  <ion-card-content>
-    {{questionsService.question}}  </ion-card-content>
+<ion-card *ngFor="let q of data">
+  <ion-card-content >
+    {{q.question}}
+  </ion-card-content>
 </ion-card>
-<div class="answers">
-  <ion-card>
-    <ion-card-content>
-      answer #1
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-content>
-      answer #2
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-content>
-      answer #3
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-content>
-      answer #4
-    </ion-card-content>
-  </ion-card>
-</div>
-
+<ion-card *ngFor="let item of data.results[0]">
+  <ion-card-content>
+    {{data}}
+  </ion-card-content>
+</ion-card>
 </ion-content>
